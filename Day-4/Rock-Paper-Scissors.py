@@ -33,6 +33,10 @@ game_images = [rock, paper, scissors]
 
 user_choice = int(input("What do you chose? Type 1 for Rock, 2, for Paper, or 3 for Scissors.\n"))
 
+if user_choice >= 4 or user_choice < 1:
+  print("You entered an invalid number.\n")
+  user_choice = int(input("Please type: 1 for Rock, 2, for Paper, or 3 for Scissors.\n"))
+
 computer_choice = random.randint(1,3)
 
 print("You chose: \n" + game_images[user_choice -1] + "\n")
